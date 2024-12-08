@@ -1,0 +1,84 @@
+.about {
+    padding-top: 70px;
+
+    .container {
+        overflow: hidden;
+
+        .row {
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Profile-img {
+            width: 300px;
+            margin-top: 75px;
+            margin-bottom: 25px;
+            background: var(--black-color);
+            border-radius: 10%;
+            box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.7);
+            animation: slide-in-up 1s ease-in-out forwards, fade-in 1.2s ease-out forwards;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.4s ease-in-out;
+        }
+
+        .Profile-img:hover {
+            box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.4s ease-in-out;
+        }
+
+        .Bio {
+            opacity: 0;
+            animation: fade-in-down 1.2s ease-in-out forwards 0.5s;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+
+            .txtName {
+                display: flex;
+                color: var(--dynamic);
+                justify-content: center;
+                font-family: cursive;
+                font-weight: 600;
+            }
+
+            .txtRole {
+                display: flex;
+                color: var(--secondary);
+                justify-content: center;
+                letter-spacing: 6px;
+                font-weight: 900;
+            }
+        }
+
+        .about-content {
+            opacity: 0;
+            animation: fade-in-up 1.2s ease-in-out forwards 0.5s;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            color: var(--secondary);
+            border-bottom: 1px solid var(--dynamic);
+            font-family: cursive;
+        }
+    }
+
+    @media (max-width: 992px) and (min-width: 766px) {
+        .txtName {
+            font-size: 26px;
+        }
+
+        .txtRole {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container {
+            .Profile-img {
+                width: 300px;
+                margin-top: 65px;
+            }
+        }
+    }
+}

@@ -1,0 +1,228 @@
+.experience {
+    min-height: 650px;
+    animation: fade-in-up 1.2s ease-out forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    .container {
+        border-bottom: 1px solid var(--dynamic);
+        min-height: 750px;
+
+        .TimelineContainer {
+            position: relative;
+
+            .Timeline-horizontal-line {
+                opacity: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                min-height: 580px;
+                width: 3px;
+                color: var(--dynamic);
+                background-color: var(--dynamic);
+            }
+
+            .Timeline-horizontal-line.in-view {
+                opacity: 0.4;
+                z-index: 0;
+                animation: slide-in-up 0.5s ease-out, fade-in 1s ease-out;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+
+            }
+
+            .Timeline-circle {
+                position: absolute;
+                transform: translate(-105%, 120%);
+
+                img {
+                    width: 36px;
+                    z-index: 1;
+                }
+            }
+
+            .Timeline-circle-left {
+                left: 110%;
+            }
+
+            .Timeline-circle-right {
+                right: 95%;
+            }
+
+            .Box {
+                padding: 20px;
+                color: var(--secondary);
+                border-radius: 20px;
+                min-height: 160px;
+                border: 2px solid var(--dynamic);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: var(--black-color) 0px 2px 4px 0px, var(--black-color) 0px 2px 16px 0px;
+
+                &.dark {
+                    background: linear-gradient(270deg, var(--black-color), #07031b, #005454);
+
+                    .Timeline-circle {
+                        img {
+                            filter: invert(100%);
+                        }
+                    }
+                }
+
+                &.light {
+                    background: linear-gradient(270deg, #fbc2eb, #fefcbf);
+
+                    .Timeline-circle {
+                        img {
+                            filter: invert(0%);
+                        }
+                    }
+                }
+            }
+
+            .Timeline-left-1 {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 45%;
+            }
+
+            .Timeline-left-1.in-view {
+                opacity: 1;
+                animation: slide-in-left 1s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Timeline-right-2 {
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 80px;
+                width: 45%;
+            }
+
+            .Timeline-right-2.in-view {
+                opacity: 1;
+                animation: slide-in-right 1.5s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Timeline-left-3 {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 185px;
+                width: 45%;
+            }
+
+            .Timeline-left-3.in-view {
+                opacity: 1;
+                animation: slide-in-left 2s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Timeline-right-4 {
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 265px;
+                width: 45%;
+            }
+
+            .Timeline-right-4.in-view {
+                opacity: 1;
+                animation: slide-in-right 2.5s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Timeline-left-5 {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 370px;
+                width: 45%;
+            }
+
+            .Timeline-left-5.in-view {
+                opacity: 1;
+                animation: slide-in-left 3s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Timeline-right-6 {
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 450px;
+                width: 45%;
+            }
+
+            .Timeline-right-6.in-view {
+                opacity: 1;
+                animation: slide-in-right 3.5s ease-out forwards, fade-in 1s ease-out forwards;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .Box:hover {
+                transform: scale(1.2);
+                box-shadow: var(--dynamic) 0px 0px 11px 0px, var(--dynamic) 0px 0px 11px 0px;
+                border: none;
+                transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+            }
+
+            @media (max-width: 1020px) {
+                .experience {
+                    min-height: 850px;
+                    margin-top: 50px;
+                }
+
+                .TimelineContainer {
+                    position: static;
+                }
+
+                .Timeline-horizontal-line {
+                    display: flex;
+                    left: 10%;
+                    min-height: 1130px;
+                }
+
+                .Timeline-circle-left {
+                    left: -22px;
+                }
+
+                .Timeline-circle-right {
+                    left: -22px;
+                }
+
+                .row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+
+                .col {
+                    width: 80%;
+                    margin-bottom: 20px;
+                }
+
+                .Box {
+                    width: 70%;
+                    min-height: 150px;
+                }
+
+                .Timeline-left-1,
+                .Timeline-right-2,
+                .Timeline-left-3,
+                .Timeline-right-4,
+                .Timeline-left-5,
+                .Timeline-right-6 {
+                    position: relative;
+                    width: 100%;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

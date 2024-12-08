@@ -1,0 +1,135 @@
+@use './Loader.scss';
+@use './ChatBot.scss';
+@use './NavBar.scss';
+@use './About.scss';
+@use './Skills.scss';
+@use './Experience.scss';
+@use './Contact.scss';
+@use './Animation.scss';
+
+:root {
+  --primary: #07031b;
+  --secondary: #F6FFDE;
+  --dynamic: #61F4DE;
+  --dynamic-bg: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fefcbf);
+  --black-color: #000;
+}
+
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.S27 {
+
+  .Bg-Container {
+    &.dark {
+      transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+      background: linear-gradient(331deg, var(--black-color), #07031b, #005454);
+    }
+
+    &.light {
+      transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fefcbf);
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    min-height: 80px;
+    display: flex;
+    text-align: center;
+    color: var(--secondary);
+    animation: fade-in-down 1.2s ease-out forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+.heading {
+  padding: 20px 0px 20px 0px;
+  color: var(--dynamic);
+  letter-spacing: 7px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+
+  img {
+    width: 55px;
+  }
+
+  &.dark {
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  &.light {
+    img {
+      filter: invert(0%);
+    }
+  }
+}
+
+p {
+  line-height: 1.6;
+  font-family: cursive;
+
+  &.dark {
+    color: var(--black-color);
+  }
+
+  &.light {
+    color: var(--black-color);
+  }
+}
+
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.feedbackModal {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, background 0.3s ease;
+  background-color: var(--black-color);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    img {
+      filter: invert(100%);
+      width: 50px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,253 @@
+.navBar {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    animation: fade-in 1.2s ease-out forwards 0.5s;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    .container {
+        padding: 7px 0px 7px 0px;
+
+        .S27-logo {
+            img {
+                width: 65px;
+                height: auto;
+                animation: roll-rotate 1.2s ease-out forwards 0.5s;
+                transition: transform 0.3s ease;
+            }
+
+            &.dark {
+                img {
+                    filter: invert(0%);
+                }
+            }
+
+            &.light {
+                img {
+                    filter: invert(100%);
+                }
+            }
+        }
+
+        .dropdown-color-theme {
+            animation: roll-rotate 1.2s ease-out forwards 0.5s;
+            transition: transform 0.3s ease;
+
+            .color-theme-icon {
+                width: 30px;
+                height: auto;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                z-index: 3;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .dropdown-menu li:first-child:hover {
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+                background: var(--dynamic);
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .dropdown-menu li:last-child:hover {
+                border-bottom-left-radius: 7px;
+                border-bottom-right-radius: 7px;
+                background: var(--dynamic);
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .dropdown-menu li a {
+                padding: 10px;
+                display: block;
+                text-decoration: none;
+                color: #F6FFDE;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .dropdown-color-theme:hover .dropdown-menu {
+            display: block;
+            background-color: var(--black-color);
+            animation: fade-in-down 0.8s ease-out forwards;
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .text {
+            font-size: 40px;
+            color: var(--secondary);
+            font-family: "Times New Roman", Times, serif;
+            font-weight: 600;
+            animation: roll-rotate 1.2s ease-out forwards 0.5s;
+            transition: transform 0.3s ease;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .circleDot {
+            animation: roll-rotate 1.2s ease-out forwards 0.5s;
+            transition: transform 0.3s ease;
+
+            img {
+                display: none;
+            }
+        }
+
+        .navButtons {
+            width: 100px;
+            height: 50px;
+            border-radius: 8px;
+            font-size: 14px;
+            background: transparent;
+            color: var(--secondary);
+            font-weight: 700;
+            box-shadow: var(--black-color) 0px 2px 4px 0px, var(--black-color) 0px 2px 16px 0px;
+            animation: roll-rotate 1.2s ease-out forwards 0.5s;
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+.navBarContainer {
+    position: fixed;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+
+    .S27-logoMob {
+
+        img {
+            opacity: 0;
+            width: 100px;
+            height: auto;
+            animation: slide-in-up 1.2s ease-in-out forwards 0.5s;
+            transition: transform 0.3s ease;
+        }
+
+        &.dark {
+            img {
+                filter: invert(0%);
+            }
+        }
+
+        &.light {
+            img {
+                filter: invert(100%);
+            }
+        }
+
+    }
+
+    .modalContent {
+        opacity: 0;
+        padding: 10px;
+        max-width: 100%;
+        max-height: 100%;
+        background-repeat: no-repeat;
+        animation: fade-in 0.7s ease-out forwards 0.1s;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .closeButton {
+        opacity: 0;
+        text-align: center;
+        background: none;
+        font-weight: 700;
+        border: none;
+        color: var(--secondary);
+        font-size: 16px;
+        cursor: pointer;
+        letter-spacing: 5px;
+        animation: fade-in-up 1.2s ease-out forwards 0.5s;
+        transition: transform 0.3s ease;
+        font-family: cursive;
+    }
+
+    .navButtonsPopUp {
+        opacity: 0;
+        width: 100px;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 14px;
+        background: transparent;
+        color: var(--secondary);
+        font-weight: 700;
+        box-shadow: var(--black-color) 0px 2px 4px 0px, var(--black-color) 0px 2px 16px 0px;
+        animation: roll-rotate 1.2s ease-out forwards 0.5s;
+        transition: transform 0.3s ease;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .col {
+        margin: 10px;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .container {
+        .circleDot {
+            &.dark {
+                img {
+                    display: block;
+                    filter: invert(100%);
+                    cursor: pointer;
+                }
+            }
+
+            &.light {
+                img {
+                    display: block;
+                    filter: invert(0%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .navBar {
+        .container {
+            .S27-logo {
+                width: 65px;
+                height: auto;
+            }
+        }
+    }
+
+    .navButtons {
+        display: none;
+    }
+
+    .text {
+        display: none;
+    }
+}

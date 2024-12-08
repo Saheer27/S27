@@ -1,0 +1,267 @@
+.contact {
+    animation: fade-in-up 1.2s ease-out forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+
+    .container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 3px solid var(--dynamic);
+
+        .row {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .formText {
+            margin-bottom: 10px;
+        }
+
+        .my-info {
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            margin: 25px;
+            border: 2px solid var(--dynamic);
+            min-height: 325px;
+            box-shadow: var(--black-color) 0px 2px 4px 0px, var(--black-color) 0px 2px 16px 0px;
+
+            &.dark {
+                transition: opacity 0.3s ease, box-shadow 0.4s ease-in-out;
+                background: linear-gradient(331deg, var(--black-color), #07031b, #005454);
+            }
+
+            &.light {
+                transition: opacity 0.3s ease, box-shadow 0.4s ease-in-out;
+                background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fefcbf);
+            }
+
+            .my-details {
+                color: var(--secondary);
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .container {
+                    margin-top: 20px;
+                }
+
+                .row {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center
+                }
+
+                span {
+                    a {
+                        text-decoration: none;
+                        color: var(--secondary);
+                        word-wrap: break-word;
+                        white-space: pre-wrap;
+                        word-break: break-word;
+                    }
+                }
+
+                .icon-icons {
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                .icon-icons i {
+                    margin: 8px;
+                }
+
+                .icons {
+                    color: var(--secondary);
+                    cursor: pointer;
+                    font-family: cursive;
+                }
+
+                .social-icons-row {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    margin-top: 10px;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+
+                .icon-link {
+                    color: var(--secondary);
+                    text-decoration: none;
+                    transition: transform 0.2s ease;
+                }
+
+                .icon-link:hover {
+                    transform: scale(1.2);
+                    transition: transform 0.3s ease, font-size 0.3s ease-in-out;
+
+                }
+
+                .social-icon {
+                    font-size: 2.5rem;
+                }
+
+                .icons:hover {
+                    font-size: 18px;
+                    font-weight: bold;
+                    transition: transform 0.3s ease, font-size 0.3s ease-in-out;
+                }
+            }
+        }
+
+        .my-info.in-view {
+            opacity: 1;
+            animation: slide-in-up 1s ease-out forwards, fade-in 1s ease-out forwards;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.5s ease-in-out;
+        }
+
+        .my-info:hover {
+            box-shadow: var(--dynamic) 0px 0px 11px 0px, var(--dynamic) 0px 0px 11px 0px;
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+        }
+
+        .contact-me {
+            opacity: 0;
+            transform: translateY(50px);
+            margin: 25px;
+
+            .feedBack {
+                textarea {
+                    height: 120px;
+                    width: 100%;
+                    resize: vertical;
+                }
+            }
+
+            .form-control {
+                height: 50px;
+                color: var(--secondary);
+                box-shadow: var(--black-color) 0px 2px 4px 0px, var(--black-color) 0px 2px 10px 0px;
+
+                &.dark {
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                    background: linear-gradient(331deg, var(--black-color), #07031b, #005454);
+                }
+
+                &.light {
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                    background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
+                }
+            }
+
+            .form-control:focus {
+                color: var(--dynamic);
+                border: 2px solid var(--dynamic);
+                box-shadow: var(--dynamic) 0px 0px 11px 0px, var(--dynamic) 0px 0px 11px 0px;
+                transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.5s ease-in-out;
+            }
+
+            ::placeholder {
+                font-size: 16px;
+                color: var(--secondary);
+                opacity: 0.5;
+            }
+
+            .submitBtn {
+                width: 65%;
+                height: 50px;
+                margin-right: 20px;
+                background-color: var(--dynamic);
+                color: var(--primary);
+                border: 4px solid var(--dynamic);
+                border-radius: 20px;
+                margin-bottom: 30px;
+                font-weight: 800;
+                letter-spacing: 4px;
+            }
+
+            .clearBtn {
+                width: 30%;
+                height: 50px;
+                background-color: var(--dynamic);
+                color: var(--primary);
+                border: 4px solid var(--dynamic);
+                border-radius: 20px;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+        }
+
+        .contact-me.in-view {
+            opacity: 1;
+            animation: slide-in-down 1.5s ease-out forwards, fade-in 1s ease-out forwards;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.5s ease-in-out;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            .contact-me {
+                margin: 2px;
+            }
+        }
+    }
+
+
+    @media (max-width: 576px) {
+        .container {
+            .contact-me {
+                .submitBtn {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 368px) {
+        .container {
+            .my-info {
+                flex-direction: column;
+                padding: 10px;
+                margin: 10px;
+                min-height: auto;
+
+                .my-details {
+                    margin: 10px;
+
+                    .social-icons-row {
+                        flex-wrap: wrap;
+                        gap: 0px;
+                    }
+
+                    .heading {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .icon-link {
+            font-size: 1rem;
+        }
+
+        .submitBtn,
+        .clearBtn {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+.loader-bg {
+    background: linear-gradient(135deg, #000000, #232526, #414345);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    transition: background 1.3s ease, transform 0.3s ease;
+}
+
+.loader-text {
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: cursive;
+    color: #fafafa;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    animation: circleFadeIn 1.5s ease-in-out forwards;
+}
+
+.loader-text img {
+    width: 10vw;
+    margin-right: 3vw;
+}
+
+.dot {
+    color: white;
+    display: inline-block;
+    font-size: 4vw;
+    margin: 0 0.2vw;
+    animation: dotFade 1.5s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}

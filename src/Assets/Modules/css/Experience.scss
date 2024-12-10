@@ -1,6 +1,6 @@
 .experience {
     min-height: 650px;
-    animation: fade-in-up 1.2s ease-out forwards;
+    animation: fade-in-up 0.8s ease-out forwards;
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 
@@ -20,14 +20,13 @@
                 width: 3px;
                 color: var(--dynamic);
                 background-color: var(--dynamic);
+                transition: opacity 0.3s ease;
             }
 
             .Timeline-horizontal-line.in-view {
                 opacity: 0.4;
                 z-index: 0;
-                animation: slide-in-up 0.5s ease-out, fade-in 1s ease-out;
-                transition: transform 0.3s ease, opacity 0.3s ease;
-
+                animation: slide-in-up 0.5s ease-out, fade-in 0.8s ease-out;
             }
 
             .Timeline-circle {
@@ -89,7 +88,6 @@
             .Timeline-left-1.in-view {
                 opacity: 1;
                 animation: slide-in-left 1s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Timeline-right-2 {
@@ -103,7 +101,6 @@
             .Timeline-right-2.in-view {
                 opacity: 1;
                 animation: slide-in-right 1.5s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Timeline-left-3 {
@@ -117,7 +114,6 @@
             .Timeline-left-3.in-view {
                 opacity: 1;
                 animation: slide-in-left 2s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Timeline-right-4 {
@@ -131,7 +127,6 @@
             .Timeline-right-4.in-view {
                 opacity: 1;
                 animation: slide-in-right 2.5s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Timeline-left-5 {
@@ -145,7 +140,6 @@
             .Timeline-left-5.in-view {
                 opacity: 1;
                 animation: slide-in-left 3s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Timeline-right-6 {
@@ -159,7 +153,6 @@
             .Timeline-right-6.in-view {
                 opacity: 1;
                 animation: slide-in-right 3.5s ease-out forwards, fade-in 1s ease-out forwards;
-                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .Box:hover {

@@ -303,7 +303,7 @@ const MyInfo = ({ myInfoSection, colorTheme, questAnswers, inView, reff }) => {
                             type="text"
                             name="company_organization"
                             className={`form-control ${colorTheme}`}
-                            placeholder="Company/Organization Name (optional)"
+                            placeholder="Company Name (optional)"
                             onChange={(e) =>
                               handleInputChange(
                                 "company_personal",

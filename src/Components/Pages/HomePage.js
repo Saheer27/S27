@@ -16,8 +16,8 @@ const HomePage = () => {
   const myInfoSection = useRef(null);
   const [colorTheme, setColorTheme] = useState("dark");
   const [questAnswers, setQuestAnswers] = useState([]);
-  const [loader, setLoader] = useState(false);
-  const [components, setComponents] = useState(true);
+  const [loader, setLoader] = useState(true);
+  const [components, setComponents] = useState(false);
 
   const { ref: experienceRef, inView: experienceInView } = useInView({
     threshold: 0.3,
@@ -29,19 +29,19 @@ const HomePage = () => {
     triggerOnce: true,
   });
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoader(false);
-  //     setComponents(true);
-  //   }, 2500);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoader(false);
+      setComponents(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <div className="S27">
         <div className={`Bg-Container ${colorTheme}`}>
-          {/* {loader && <Loader />} */}
+          {loader && <Loader />}
           {components && (
             <>
               <NavBar

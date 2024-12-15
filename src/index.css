@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif, 'Pacifico','Permanent Marker', cursive; */
     font-family:
-    sans-serif, 'Pacifico','Permanent Marker', cursive;
+    sans-serif, 'Pacifico','Permanent Marker','Sour Gummy', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,5 +13,6 @@ code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace; */
     font-family:
-    sans-serif, 'Pacifico','Permanent Marker', cursive;
+    sans-serif, 'Pacifico',;
+    font-family: 'Sour Gummy', sans-serif,'Permanent Marker', cursive;
 }

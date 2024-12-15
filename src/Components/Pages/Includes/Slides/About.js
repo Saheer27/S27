@@ -13,9 +13,9 @@ const About = ({ aboutSection, colorTheme }) => {
             </div>
             <div className="col">
               <div className="Bio">
-                <h2 className="txtName">
+                <h3 className="txtName">
                   <b>MOHAMMED SAHEER C A</b>
-                </h2>
+                </h3>
                 <h5 className="txtRole">- Web Developer</h5>
               </div>
             </div>
